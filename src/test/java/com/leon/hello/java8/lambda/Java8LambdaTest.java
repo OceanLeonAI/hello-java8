@@ -43,6 +43,18 @@ public class Java8LambdaTest {
         )).start();
     }
 
+    /**
+     * 两数之和操作
+     *
+     * @param intBinaryOperator
+     * @return
+     */
+    private int calculateNum(IntBinaryOperator intBinaryOperator) {
+        int a = 1;
+        int b = 1;
+        return intBinaryOperator.applyAsInt(a, b);
+    }
+
     @Test
     public void calculateNumTest() {
 
@@ -61,18 +73,6 @@ public class Java8LambdaTest {
 
         System.out.println("i = " + i);
 
-    }
-
-    /**
-     * 两数之和操作
-     *
-     * @param intBinaryOperator
-     * @return
-     */
-    private int calculateNum(IntBinaryOperator intBinaryOperator) {
-        int a = 1;
-        int b = 1;
-        return intBinaryOperator.applyAsInt(a, b);
     }
 
     @Test
